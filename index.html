@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AnswerStack — Customer FAQ Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Answer<span>Stack</span></div>
+    <div class="badge">MVP • Local-first demo</div>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">CUSTOMER SUPPORT, SIMPLIFIED</p>
+        <h1>Turn repetitive questions into automatic answers.</h1>
+        <p class="sub">Load your business FAQs, preview the assistant, and copy an embeddable widget snippet.</p>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>Knowledge base</h2>
+          <button id="loadDemo" class="secondary">Load demo</button>
+        </div>
+        <p class="hint">One entry per line: <b>Question | Answer</b></p>
+        <textarea id="kb" spellcheck="false" placeholder="What are your opening hours? | We are open Monday–Friday, 8am–5pm."></textarea>
+        <div class="actions">
+          <button id="save" class="primary">Save knowledge base</button>
+          <button id="clear" class="secondary">Clear</button>
+        </div>
+        <div id="status" class="status"></div>
+      </div>
+
+      <div class="panel chat-panel">
+        <div class="panel-head">
+          <h2>Assistant preview</h2>
+          <button id="resetChat" class="secondary">Reset</button>
+        </div>
+        <div id="messages" class="messages"></div>
+        <form id="chatForm" class="chat-form">
+          <input id="question" autocomplete="off" placeholder="Ask a customer question…" />
+          <button class="primary" type="submit">Ask</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="panel embed">
+      <div class="panel-head">
+        <h2>Embed AnswerStack</h2>
+        <button id="copy" class="secondary">Copy snippet</button>
+      </div>
+      <p class="hint">This MVP generates a simple placeholder embed. A production version can replace it with a hosted API/widget.</p>
+      <pre id="snippet"></pre>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
